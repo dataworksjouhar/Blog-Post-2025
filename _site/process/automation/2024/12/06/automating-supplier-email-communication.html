@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automating Supplier Email Communication with VBA and Outlook | my dataworks – Mohammed Jouhar</title>
+  <meta name="description" content="Background">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+  
+  <!-- Dark mode toggle script -->
+  <script>
+    // Check for saved theme preference or respect OS preference
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+    const storedTheme = localStorage.getItem("theme");
+    
+    if (storedTheme === "dark" || (!storedTheme && prefersDarkScheme.matches)) {
+      document.documentElement.setAttribute("data-theme", "dark");
+    } else {
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+  </script>
+  
+  <!-- Google Analytics placeholder -->
+  <!-- Google tag (gtag.js) -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script> -->
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="site-header-content">
+        <a class="site-title" href="/">my dataworks – Mohammed Jouhar</a>
+        <nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewBox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+              </svg>
+            </span>
+          </label>
+          <div class="trigger">
+            <a class="page-link" href="/">Home</a>
+            <a class="page-link" href="/blog/">Blog</a>
+            <a class="page-link" href="/about/">About</a>
+            <a class="page-link" href="/contact/">Contact</a>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+              <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+              <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-content">
+    <div class="container">
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">Automating Supplier Email Communication with VBA and Outlook</h1>
+    <div class="post-meta">
+      <time datetime="2024-12-06T19:00:00-05:00">December 6, 2024</time>
+      
+      <span class="post-categories">
+        in 
+        
+        <a href="/category/process/">Process</a>, 
+        
+        <a href="/category/automation/">Automation</a>
+        
+      </span>
+      
+    </div>
+  </header>
+
+  <div class="post-content">
+    <h2 id="background">Background</h2>
+
+<p>Recently, a close friend who works as a Senior Procurement Officer at a company in Kuwait reached out to me. He explained that among his many responsibilities, one time-consuming daily task involves sending about 100 emails to various vendors. Each email requires a unique subject line containing the PO number and supplier name, along with a customized message body and specific attachment. He asked if there was a way to streamline this process.</p>
+
+<p>The manual process took 1-2 hours daily, affecting productivity and focus on strategic tasks. The repetitive nature increased the risk of errors, leading to potential delays in procurement and supplier communication. During peak periods, manual email creation became a bottleneck, causing order processing delays. Additionally, there needed to be a standardized way to track sent emails, complicating record-keeping and follow-ups.</p>
+
+<hr />
+
+<h2 id="the-solution">The Solution</h2>
+
+<p>Drawing from my experience at Lowes, where I developed advanced email automation systems, I created a straightforward Excel-based tool that transforms this time-consuming process into a single-click operation.</p>
+
+<h3 id="key-features">Key Features:</h3>
+
+<ul>
+  <li>Automated email generation with personalized content</li>
+  <li>Dynamic subject line management</li>
+  <li>Error prevention and validation checks</li>
+</ul>
+
+<h3 id="how-it-works">How It Works</h3>
+
+<p>The tool seamlessly integrates Excel with Outlook, allowing you to:</p>
+
+<ul>
+  <li>Customize each email’s recipient, subject line, and content</li>
+  <li>Automatically attach relevant documents</li>
+  <li>Verify all attachments before sending</li>
+</ul>
+
+<h3 id="getting-started">Getting Started</h3>
+
+<ul>
+  <li>Open the Excel Workbook</li>
+  <li>Enable Macros when prompted</li>
+  <li>Update the required field in Sheet “SEND EMAIL”</li>
+  <li>Locate the “Send Bulk Email” button</li>
+  <li>Click the button to Send Bulk Emails</li>
+</ul>
+
+<h3 id="download-the-tool">Download the Tool</h3>
+
+<p><a href="https://prod-files-secure.s3.us-west-2.amazonaws.com/08f0083d-46c8-4dd2-b16d-8a8719030015/f73e094c-e884-4f81-be57-932a636de656/Bulk_Email_Version.xlsm">Bulk Email Version.xlsm</a></p>
+
+<hr />
+
+<p>Feel free to download and try it out. Please note that this tool was built for a specific user. If you need a more general version, personalized modifications, or any clarification, please don’t hesitate to reach out to me.</p>
+
+
+  </div>
+
+  
+  <div class="post-tags">
+    <h4>Tags:</h4>
+    <ul>
+      
+      <li><a href="/tag/process/">#Process</a></li>
+      
+      <li><a href="/tag/automation/">#Automation</a></li>
+      
+    </ul>
+  </div>
+  
+
+  <div class="post-author">
+    <h3>About the Author</h3>
+    <div class="author-bio">
+      <h4>Mohammed Jouhar</h4>
+      <p>A data professional with over 10 years of experience in analytics, automation,  and data strategy. I've worked in retail, data migration, AI agents, and more.</p>
+    </div>
+  </div>
+
+  <div class="post-share">
+    <h4>Share this post:</h4>
+    <ul class="share-buttons">
+      <li><a href="https://twitter.com/intent/tweet?text=Automating+Supplier+Email+Communication+with+VBA+and+Outlook&url=/process/automation/2024/12/06/automating-supplier-email-communication.html" target="_blank" title="Share on Twitter">Twitter</a></li>
+      <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=/process/automation/2024/12/06/automating-supplier-email-communication.html&title=Automating+Supplier+Email+Communication+with+VBA+and+Outlook" target="_blank" title="Share on LinkedIn">LinkedIn</a></li>
+      <li><a href="mailto:?subject=Automating+Supplier+Email+Communication+with+VBA+and+Outlook&body=Check out this post: /process/automation/2024/12/06/automating-supplier-email-communication.html" title="Share via Email">Email</a></li>
+    </ul>
+  </div>
+
+  <div class="post-navigation">
+    <div class="post-navigation-links">
+      
+      
+      
+      <a class="next-post" href="/data/visualization,/process/automation/2024/12/08/data-cleansing-master-tool.html">
+        <span>Next Post</span>
+        <h4>Data Cleansing Master Tool</h4>
+      </a>
+      
+    </div>
+  </div>
+
+  <!-- Comments section placeholder -->
+  <!-- <div class="post-comments">
+    <div id="disqus_thread"></div>
+  </div> -->
+</article>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col">
+          <h3>my dataworks – Mohammed Jouhar</h3>
+          <p>Exploring AI, data, and career growth—one post at a time</p>
+        </div>
+        <div class="footer-col">
+          <h3>Categories</h3>
+          <ul class="category-list">
+            
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Connect</h3>
+          <ul class="social-links">
+            
+            <li><a href="https://linkedin.com/in/mohammed-jouhar" target="_blank">LinkedIn</a></li>
+            
+            
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 Mohammed Jouhar. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Dark mode toggle script -->
+  <script>
+    const themeToggle = document.getElementById("theme-toggle");
+    
+    themeToggle.addEventListener("click", () => {
+      const currentTheme = document.documentElement.getAttribute("data-theme");
+      const newTheme = currentTheme === "dark" ? "light" : "dark";
+      
+      document.documentElement.setAttribute("data-theme", newTheme);
+      localStorage.setItem("theme", newTheme);
+    });
+  </script>
+</body>
+</html>

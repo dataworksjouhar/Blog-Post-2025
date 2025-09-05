@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Cleansing Master Tool | my dataworks – Mohammed Jouhar</title>
+  <meta name="description" content="🚀 Introduction">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+  
+  <!-- Dark mode toggle script -->
+  <script>
+    // Check for saved theme preference or respect OS preference
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+    const storedTheme = localStorage.getItem("theme");
+    
+    if (storedTheme === "dark" || (!storedTheme && prefersDarkScheme.matches)) {
+      document.documentElement.setAttribute("data-theme", "dark");
+    } else {
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+  </script>
+  
+  <!-- Google Analytics placeholder -->
+  <!-- Google tag (gtag.js) -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script> -->
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="site-header-content">
+        <a class="site-title" href="/">my dataworks – Mohammed Jouhar</a>
+        <nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewBox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+              </svg>
+            </span>
+          </label>
+          <div class="trigger">
+            <a class="page-link" href="/">Home</a>
+            <a class="page-link" href="/blog/">Blog</a>
+            <a class="page-link" href="/about/">About</a>
+            <a class="page-link" href="/contact/">Contact</a>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+              <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+              <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-content">
+    <div class="container">
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">Data Cleansing Master Tool</h1>
+    <div class="post-meta">
+      <time datetime="2024-12-08T19:00:00-05:00">December 8, 2024</time>
+      
+      <span class="post-categories">
+        in 
+        
+        <a href="/category/data/">Data</a>, 
+        
+        <a href="/category/visualization/">Visualization,</a>, 
+        
+        <a href="/category/process/">Process</a>, 
+        
+        <a href="/category/automation/">Automation</a>
+        
+      </span>
+      
+    </div>
+  </header>
+
+  <div class="post-content">
+    <h1 id="-introduction">🚀 Introduction</h1>
+
+<p>As a data quality specialist, I led the development of the <strong>Data Cleansing Master Tool</strong>, an innovative solution that helped our data management processes. In this case study, I’ll demonstrate how I identified critical business challenges, implemented an efficient solution, and delivered measurable results that transformed our organization’s data quality management.</p>
+
+<h2 id="️-challenges-faced">⚠️ Challenges Faced</h2>
+
+<p>We encountered several key challenges during this project:</p>
+
+<ul>
+  <li>🔧 <strong>Lack of Required Cleansing Tool</strong>: Our migration partner lacked the necessary data cleansing capabilities.</li>
+  <li>💰 <strong>Budget Constraints</strong>: We couldn’t implement premium solutions like Informatica CDQ due to cost limitations. We needed to find affordable yet effective cleansing tools.</li>
+  <li>⏰ <strong>Tight Timeline</strong>: Leadership needed quick insights into existing data quality, creating deadline pressure.</li>
+  <li>👨‍💻 <strong>Manual Processing</strong>: Identifying and fixing data quality issues manually was inefficient and time-intensive.</li>
+  <li>📊 <strong>Excel Dependency</strong>: Our business teams relied heavily on Excel, which shaped our tool’s design.</li>
+</ul>
+
+<h2 id="️-tool-description">🛠️ Tool Description</h2>
+
+<p>The <strong>Data Cleansing Master Tool</strong> is a VBA-based solution that automates data quality management. Here are its key features:</p>
+
+<ul>
+  <li>🤖 <strong>Automated Data Cleansing</strong>: 🤖 <strong>Automated Data Cleansing</strong>: Based on user input in the Config Sheet, the tool automatically finds and highlights data issues.</li>
+  <li>🎯 <strong>User-Friendly Interface</strong>: Simple navigation and intuitive controls make the tool easy to use.</li>
+</ul>
+
+<p><img src="/assets/images/DataCleansingmastertool.png" alt="Data Cleansing Master Tool Interface" title="Data Cleansing Master Tool Interface" /></p>
+
+<ul>
+  <li>⚙️ <strong>Configurable Rules</strong>: Users can customize workbook names, column names, and rule details in the configuration sheet.</li>
+</ul>
+
+<h2 id="-data-quality-dimensions">📊 Data Quality Dimensions</h2>
+
+<p>The tool classifies data into key quality dimensions:</p>
+
+<ul>
+  <li>Completeness</li>
+  <li>Validity</li>
+  <li>Uniqueness</li>
+  <li>Consistency</li>
+  <li>Format</li>
+</ul>
+
+<h2 id="-data-quality-rules">📋 Data Quality Rules</h2>
+
+<p>The tool includes comprehensive validation rules:</p>
+
+<ul>
+  <li>📝 Data Validation
+    <ul>
+      <li>Null values</li>
+      <li>Junk character</li>
+      <li>Valid values</li>
+      <li>Length Check</li>
+    </ul>
+  </li>
+  <li>🔍 Advanced Checks
+    <ul>
+      <li>Valid Email ID Check</li>
+      <li>Valid Phone Number Check</li>
+      <li>Valid Date Check</li>
+      <li>Duplicate Checks</li>
+      <li>Wild Card</li>
+      <li>Other validation checks</li>
+    </ul>
+  </li>
+</ul>
+
+<p>https://www.loom.com/share/27457e1588874684b93de24c26164369?sid=ad3348b4-dd71-4654-a11e-de6371c91934a</p>
+
+<h2 id="-benefits">💫 Benefits</h2>
+
+<ul>
+  <li><strong>💰 Significant Cost Savings</strong>: Avoided implementation costs of 109,406 KWD by developing an in-house solution instead of implementing Informatica</li>
+  <li><strong>⚡ Dramatic Time Reduction</strong>: Reduced processing time from 2.5 days to 2-3 minutes per dataset, representing a 99% improvement in efficiency</li>
+  <li><strong>🔐 Enhanced Control</strong>: Developed and maintained 400+ rules in-house, ensuring complete control over data quality management without vendor dependency</li>
+  <li>🎨 Validation Error Details &amp; Visual Priority System: An intuitive color-coding system helps users identify data quality issues at a glance. High-priority issues appear in red, medium-priority in orange, and low-priority in yellow. Each flagged item includes a validation error message to guide correction</li>
+</ul>
+
+<h3 id="-reporting--analytics">📈 Reporting &amp; Analytics</h3>
+
+<p>All cleansing data is seamlessly integrated with Power BI dashboards, providing management with comprehensive data quality insights. This integration enables data-driven decision-making and continuous quality improvement.</p>
+
+<p>A screenshot of the data quality dashboard is shown below</p>
+
+<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/08f0083d-46c8-4dd2-b16d-8a8719030015/399e0492-5be1-4bbd-8149-9870dc7310b5/image.png" alt="image.png" /></p>
+
+<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/08f0083d-46c8-4dd2-b16d-8a8719030015/fe8e46ed-4e03-47e4-81df-b4584a7105aa/image.png" alt="image.png" /></p>
+
+<p>The Power BI dashboard displays metrics on data quality, with interactive visualizations enabling teams to quickly identify issues and track improvements across all quality dimensions.</p>
+
+<h2 id="-conclusion">🎉 Conclusion</h2>
+
+<p>The <strong>Data Cleansing Master Tool</strong> has significantly improved our data management capabilities. The challenges we overcame provided valuable lessons for future projects.  For this project, I received an award from the CTO of Alshaya (picture attached below)</p>
+
+
+  </div>
+
+  
+  <div class="post-tags">
+    <h4>Tags:</h4>
+    <ul>
+      
+      <li><a href="/tag/data/">#Data</a></li>
+      
+      <li><a href="/tag/visualization/">#Visualization,</a></li>
+      
+      <li><a href="/tag/process/">#Process</a></li>
+      
+      <li><a href="/tag/automation/">#Automation</a></li>
+      
+    </ul>
+  </div>
+  
+
+  <div class="post-author">
+    <h3>About the Author</h3>
+    <div class="author-bio">
+      <h4>Mohammed Jouhar</h4>
+      <p>A data professional with over 10 years of experience in analytics, automation,  and data strategy. I've worked in retail, data migration, AI agents, and more.</p>
+    </div>
+  </div>
+
+  <div class="post-share">
+    <h4>Share this post:</h4>
+    <ul class="share-buttons">
+      <li><a href="https://twitter.com/intent/tweet?text=Data+Cleansing+Master+Tool&url=/data/visualization,/process/automation/2024/12/08/data-cleansing-master-tool.html" target="_blank" title="Share on Twitter">Twitter</a></li>
+      <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=/data/visualization,/process/automation/2024/12/08/data-cleansing-master-tool.html&title=Data+Cleansing+Master+Tool" target="_blank" title="Share on LinkedIn">LinkedIn</a></li>
+      <li><a href="mailto:?subject=Data+Cleansing+Master+Tool&body=Check out this post: /data/visualization,/process/automation/2024/12/08/data-cleansing-master-tool.html" title="Share via Email">Email</a></li>
+    </ul>
+  </div>
+
+  <div class="post-navigation">
+    <div class="post-navigation-links">
+      
+      <a class="prev-post" href="/process/automation/2024/12/06/automating-supplier-email-communication.html">
+        <span>Previous Post</span>
+        <h4>Automating Supplier Email Communication with VBA and Outlook</h4>
+      </a>
+      
+      
+      
+      <a class="next-post" href="/ai/automation/2025/04/21/AiAgentsareHere.html">
+        <span>Next Post</span>
+        <h4>AI Agents Are Here: How AI Is Going to Change the Way We Work</h4>
+      </a>
+      
+    </div>
+  </div>
+
+  <!-- Comments section placeholder -->
+  <!-- <div class="post-comments">
+    <div id="disqus_thread"></div>
+  </div> -->
+</article>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col">
+          <h3>my dataworks – Mohammed Jouhar</h3>
+          <p>Exploring AI, data, and career growth—one post at a time</p>
+        </div>
+        <div class="footer-col">
+          <h3>Categories</h3>
+          <ul class="category-list">
+            
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Connect</h3>
+          <ul class="social-links">
+            
+            <li><a href="https://linkedin.com/in/mohammed-jouhar" target="_blank">LinkedIn</a></li>
+            
+            
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 Mohammed Jouhar. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Dark mode toggle script -->
+  <script>
+    const themeToggle = document.getElementById("theme-toggle");
+    
+    themeToggle.addEventListener("click", () => {
+      const currentTheme = document.documentElement.getAttribute("data-theme");
+      const newTheme = currentTheme === "dark" ? "light" : "dark";
+      
+      document.documentElement.setAttribute("data-theme", newTheme);
+      localStorage.setItem("theme", newTheme);
+    });
+  </script>
+</body>
+</html>

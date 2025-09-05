@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | my dataworks – Mohammed Jouhar</title>
+  <meta name="description" content="A personal blog sharing practical, easy-to-understand insights in Data Analytics,  AI Agents, and career development based on real-world experience. Created to inspire  and educate aspiring analysts, data professionals, and curious learners.">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+  
+  <!-- Dark mode toggle script -->
+  <script>
+    // Check for saved theme preference or respect OS preference
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+    const storedTheme = localStorage.getItem("theme");
+    
+    if (storedTheme === "dark" || (!storedTheme && prefersDarkScheme.matches)) {
+      document.documentElement.setAttribute("data-theme", "dark");
+    } else {
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+  </script>
+  
+  <!-- Google Analytics placeholder -->
+  <!-- Google tag (gtag.js) -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script> -->
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="site-header-content">
+        <a class="site-title" href="/">my dataworks – Mohammed Jouhar</a>
+        <nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewBox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+              </svg>
+            </span>
+          </label>
+          <div class="trigger">
+            <a class="page-link" href="/">Home</a>
+            <a class="page-link" href="/blog/">Blog</a>
+            <a class="page-link" href="/about/">About</a>
+            <a class="page-link" href="/contact/">Contact</a>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+              <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+              <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-content">
+    <div class="container">
+      <div class="blog-container">
+  <header class="blog-header">
+    <h1 class="page-title">Blog</h1>
+    <p class="page-description">Explore articles on data analytics, AI agents, and career development.</p>
+  </header>
+
+  <div class="category-filter">
+    <h3>Filter by Category:</h3>
+    <div class="category-buttons">
+      <a href="/blog/" class="category-button active">All</a>
+      
+    </div>
+  </div>
+
+  <div class="post-list">
+    
+    <article class="post-item">
+      <div class="post-item-meta">
+        <time datetime="2025-04-21T11:28:52-04:00">April 21, 2025</time>
+        
+        <span class="post-category">AI</span>
+        
+      </div>
+      <h2 class="post-item-title"><a href="/ai/automation/2025/04/21/AiAgentsareHere.html">AI Agents Are Here: How AI Is Going to Change the Way We Work</a></h2>
+      <div class="post-item-excerpt">
+        We’ve come a long way from traditional software. Applications used to follow strict rules:
+Input &gt; Process &gt; Output.
+
+      </div>
+      <a href="/ai/automation/2025/04/21/AiAgentsareHere.html" class="read-more">Read More</a>
+    </article>
+    
+    <article class="post-item">
+      <div class="post-item-meta">
+        <time datetime="2024-12-08T19:00:00-05:00">December 8, 2024</time>
+        
+        <span class="post-category">Data</span>
+        
+      </div>
+      <h2 class="post-item-title"><a href="/data/visualization,/process/automation/2024/12/08/data-cleansing-master-tool.html">Data Cleansing Master Tool</a></h2>
+      <div class="post-item-excerpt">
+        🚀 Introduction
+
+      </div>
+      <a href="/data/visualization,/process/automation/2024/12/08/data-cleansing-master-tool.html" class="read-more">Read More</a>
+    </article>
+    
+    <article class="post-item">
+      <div class="post-item-meta">
+        <time datetime="2024-12-06T19:00:00-05:00">December 6, 2024</time>
+        
+        <span class="post-category">Process</span>
+        
+      </div>
+      <h2 class="post-item-title"><a href="/process/automation/2024/12/06/automating-supplier-email-communication.html">Automating Supplier Email Communication with VBA and Outlook</a></h2>
+      <div class="post-item-excerpt">
+        Background
+
+      </div>
+      <a href="/process/automation/2024/12/06/automating-supplier-email-communication.html" class="read-more">Read More</a>
+    </article>
+    
+  </div>
+
+  <!-- Pagination links -->
+  
+</div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col">
+          <h3>my dataworks – Mohammed Jouhar</h3>
+          <p>Exploring AI, data, and career growth—one post at a time</p>
+        </div>
+        <div class="footer-col">
+          <h3>Categories</h3>
+          <ul class="category-list">
+            
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Connect</h3>
+          <ul class="social-links">
+            
+            <li><a href="https://linkedin.com/in/mohammed-jouhar" target="_blank">LinkedIn</a></li>
+            
+            
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 Mohammed Jouhar. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Dark mode toggle script -->
+  <script>
+    const themeToggle = document.getElementById("theme-toggle");
+    
+    themeToggle.addEventListener("click", () => {
+      const currentTheme = document.documentElement.getAttribute("data-theme");
+      const newTheme = currentTheme === "dark" ? "light" : "dark";
+      
+      document.documentElement.setAttribute("data-theme", newTheme);
+      localStorage.setItem("theme", newTheme);
+    });
+  </script>
+</body>
+</html>
